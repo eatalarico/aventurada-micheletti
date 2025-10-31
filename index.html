@@ -12,13 +12,28 @@
         <p id="story-text">Um dia desses, dentro de um livro da biblioteca da  minha cidade , eu  encontrei um mapa antigo  sobre uma pedra de sal perdida quem iria ser a pessoas que seria  mais rica e teria a beleza mais natural do mundo então eu simplesmente decedi seguir esse mapa .</p>
         
         <div id="choices-container">
-            <button id="choice-a" onclick="makeChoice('A')">Opção A</button>
-            <button id="choice-b" onclick="makeChoice('B')">Opção B</button>
+            <button id="choice-a" onclick="makeChoice('A')"Salvador>Opção A</button>
+            <button id="choice-b" onclick="makeChoice('B')"Recífe>Opção B</button>
         </div>
-        
-        <p id="current-step">Passo atual: Início</p>
+    <div class="passo" id="passo-1">
+            <p>Você começa sua jornada em salvador ,acorda bem ao   amanhecer sai  para encontrar a primeira pista.</p>
+            <button class="btn-proximo" data-proximo="3">Procurar a pista na praia</button>
+            <button class="btn-proximo" data-proximo="4">Desisti e voltei pra Salvador</button>
     </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class="passo" id="passo-2">
+            <p> Em  Recife você  visita a cidade de Tamandaré para localizar a entrada da pista.</p>
+            <button class="btn-proximo" data-proximo="5">Investigar as praias mais antigas</button>
+            <button class="btn-proximo" data-proximo="6">Explorar as praias próximas</button>
+        </div>  
+        <div class="passo" id="passo-3">
+            <p>Na praia em tamandaré  você encontra uma antiga inscrição apontando que a próxima pista está localizada no amapá.</p>
+            <button class="btn-proximo" data-proximo="7">Seguindo para o Amapá</button>
+        </div>
+          <div class="passo" id="passo-4">
+            <img src="img/cenario-passo4-voltar-casa.png" alt="imagem voltando para casa e desitindo da aventura">
+            <p>Você decide que a aventura é grande demais e volta para sua cidade.</p>
+        </div>
+        <div class="passo" id="passo-5">
+            <p>Nas praia de tamandaré  você descobre um mapa antigo escondido atrás de  uma pedra e lá diz que a proxima pista  está no Amapá</p>
+            <button class="btn-proximo" data-proximo="7">Seguindo para o Amapá</button>
+        </div>

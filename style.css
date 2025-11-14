@@ -1,50 +1,135 @@
+/* Importação da fonte do Google Fonts */
+/* A tag <link> no HTML já faz isso, mas é bom deixar a nota */
+
+:root {
+    /* Cores */
+    --cor-fundo: #f4f4f9;
+    --cor-texto: #333;
+    --cor-primaria: #007bff; /* Azul para botões */
+    --cor-secundaria: #6c757d; /* Cinza para botões */
+    --cor-sucesso: #28a745; /* Verde para sucesso */
+    --cor-falha: #dc3545; /* Vermelho para falha */
+    --cor-neutro: #ffc107; /* Amarelo para neutro */
+    --cor-tragico: #6610f2; /* Roxo para trágico */
+    --fonte-principal: 'Bai Jamjuree', sans-serif;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
-    margin: 0;
 }
 
-#game-container {
-    background-color: #fff;
+main {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 90%;
 }
 
-h1 {
+/* Estilização dos Passos (telas do jogo) */
+.passo {
     text-align: center;
-    color: #007bff; /* Cor do Rio */
+    padding: 20px 0;
 }
 
-#story-text {
-    margin-bottom: 20px;
+.passo img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.passo p {
+    font-size: 1.15em;
     line-height: 1.6;
-    min-height: 100px; /* Garante que o texto tenha espaço */
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 0 10px;
 }
 
-#choices-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #28a745; /* Cor verde/esperança */
-    color: white;
+/* Estilização dos Botões */
+.btn-proximo {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.05em;
+    font-weight: 600;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Estilo padrão de botão de escolha */
+    background-color: var(--cor-primaria);
+    color: white;
 }
 
-button:hover {
-    background-color: #1e7e34;
+.btn-proximo:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização específica para os FINAIS */
+#passo-7, #passo-9, #passo-15, #passo-17, #passo-18 {
+    border-top: 3px solid;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+/* Finais com cores de destaque */
+
+/* FALHA (Passo 7) e FIM RUIM (Passo 9) */
+#passo-7, #passo-9 {
+    border-color: var(--cor-falha);
+    background-color: #f8d7da; /* Fundo levemente vermelho */
+    color: #721c24;
+}
+#passo-7 button, #passo-9 button {
+    background-color: var(--cor-falha);
+}
+
+/* SUCESSO e FINAL BOM (Passo 8, 10, 17) */
+#passo-8, #passo-10, #passo-17 {
+    border-color: var(--cor-sucesso);
+    background-color: #d4edda; /* Fundo levemente verde */
+    color: #155724;
+}
+#passo-8 button, #passo-10 button, #passo-17 button {
+    background-color: var(--cor-sucesso);
+}
+
+/* FINAL NEUTRO (Passo 15) */
+#passo-15 {
+    border-color: var(--cor-neutro);
+    background-color: #fff3cd; /* Fundo levemente amarelo */
+    color: #856404;
+}
+#passo-15 button {
+    background-color: var(--cor-neutro);
+}
+
+/* FINAL TRÁGICO (Passo 18) */
+#passo-18 {
+    border-color: var(--cor-tragico);
+    background-color: #e6e6fa; /* Fundo lavanda */
+    color: #4b0082;
+}
+#passo-18 button {
+    background-color: var(--cor-tragico);
 }

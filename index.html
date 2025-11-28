@@ -1,100 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>O Relógio Quebrado - A Aventura em Lisboa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Em busca da cidade perdida</title>
 </head>
 <body>
-    <main>
-                <div class="passo ativo" id="passo-0">
-            <img src="img/lisboa-seculo-xviii.png" alt="Desenho de uma praça movimentada em Lisboa no século XVIII.">
-            <p>Em sua oficina, o misterioso relógio de bolso quebrou, e um portal azul se abriu, sugando você. Agora, você está na vibrante Praça do Comércio, em **Lisboa, 1755**. Seu relógio está em pedaços. Você precisa do metal raro *Cronônio* e de ajuda para consertá-lo e voltar para casa.</p>
-            <button class="btn-proximo" data-proximo="1">Procurar o metal Cronônio para o conserto</button>
-            <button class="btn-proximo" data-proximo="2">Procurar um velho mestre relojoeiro na cidade</button>
-        </div>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/cenario-passo0.png" alt="">
+            <p>Um dia desses, dentro de um livro da biblioteca da escola, eu descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
+            <button class="btn-proximo" data-proximo="1">Rio de Janeiro</button>
+            <button class="btn-proximo" data-proximo="2">Pernambuco</button>
+        </div>
+        <div class="passo" id="passo-1">
+            <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
+            <button class="btn-proximo" data-proximo="3">Procurar a pista no topo do pico</button>
+            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
+        </div>
+        <div class="passo" id="passo-2">
+            <p>Em Pernambuco, você visita a histórica cidade de Olinda. Na carta, uma das pistas indica que para localizar a entrada para a cidade perdida você deve procurar a próxima pista em um dos pontos turísticos da cidade. Por qual você começa?</p>
+            <button class="btn-proximo" data-proximo="5">Investigar as igrejas antigas</button>
+            <button class="btn-proximo" data-proximo="6">Explorar as praias próximas</button>
+        </div>
+        <div class="passo" id="passo-3">
+            <p>No topo do Pico da Tijuca, você encontra uma antiga inscrição apontando que a próxima pista está
+                localizada no Amazonas.</p>
+            <button class="btn-proximo" data-proximo="7">Seguir para o Amazonas</button>
+        </div>
 
-                <div class="passo" id="passo-1">
-            <p>O **Cronônio**, o metal que alimenta o relógio, só pode ser encontrado em uma mina antiga. Você se lembra de um mapa deixado por seu avô que aponta para um local. Qual caminho você segue?</p>
-            <button class="btn-proximo" data-proximo="3">Seguir o mapa para as Minas de Aljustrel (Norte)</button>
-            <button class="btn-proximo" data-proximo="4">Tentar a sorte no cais, com marinheiros desconfiados (Sul)</button>
-        </div>
+        <div class="passo" id="passo-4">
+            <img src="img/cenario-passo4-voltar-casa.png" alt="imagem voltando para casa e desitindo da aventura">
+            <p>Você decide que a aventura é grande demais e volta para casa, mas sempre se pergunta o que teria
+                encontrado.</p>
+        </div>
 
-                <div class="passo" id="passo-2">
-            <p>Você encontra a loja abandonada do lendário **Mestre Eusébio**. A loja está vazia, exceto por um diário com uma pista enigmática sobre onde ele se escondeu: "A chave para o tempo reside no topo de 123 degraus."</p>
-            <button class="btn-proximo" data-proximo="11">Investigar a pista na Torre de Belém (123 degraus)</button>
-        </div>
+        <div class="passo" id="passo-5">
+            <p>Nas igrejas de Olinda, você descobre um mapa antigo escondido atrás de um altar, apontando que a próxima
+                pista está no Amazonas.</p>
+            <button class="btn-proximo" data-proximo="7">Viajar para o Amazonas</button>
+        </div>
 
-                <div class="passo" id="passo-3">
-            <img src="img/mina-abandonada.png" alt="Interior de uma mina abandonada com um cofre no centro.">
-            <p>Você chega às **Minas de Aljustrel**. O Cronônio está guardado em um cofre, e você só tem o conhecimento moderno e ferramentas rudimentares.</p>
-            <button class="btn-proximo" data-proximo="7">Usar o martelo para quebrar a fechadura (Arriscado!)</button>
-            <button class="btn-proximo" data-proximo="8">Usar o eletroscópio (tecnologia moderna) para desativar o cofre</button>
-        </div>
+        <div class="passo" id="passo-6">
+            <p>Explorando as praias, você encontra uma caverna escondida, mas ela leva a um beco sem saída.</p>
+            <button class="btn-proximo" data-proximo="8">Voltar e explorar as igrejas</button>
+        </div>
 
-                <div class="passo" id="passo-4">
-            <p>No cais, um marinheiro desconfiado diz ter visto o metal, mas exige que você roube um objeto de um nobre local em troca do Cronônio.</p>
-            <button class="btn-proximo" data-proximo="9">Tentar o roubo à noite (Alto risco de prisão)</button>
-            <button class="btn-proximo" data-proximo="10">Oferecer seu próprio relógio de pulso moderno em troca</button>
-        </div>
-        
-                <div class="passo" id="passo-5">
-            <p>❌ **FALHA:** O martelo quebra a fechadura, mas o som atrai guardas! Você consegue fugir, mas sem o Cronônio.</p>
-            <button class="btn-proximo" data-proximo="2">Voltar para a cidade e procurar o Mestre Eusébio</button>
-        </div>
+        <div class="passo" id="passo-7">
+            <p>No Amazonas, a busca pela cidade perdida se intensifica. Você se depara com um rio bifurcado.</p>
+            <button class="btn-proximo" data-proximo="9">Seguir pelo rio à esquerda</button>
+            <button class="btn-proximo" data-proximo="10">Seguir pelo rio à direita</button>
+        </div>
 
-                <div class="passo" id="passo-6">
-            <p>✅ **SUCESSO:** O eletroscópio desativa o cofre perfeitamente e você consegue o Cronônio!</p>
-            <button class="btn-proximo" data-proximo="14">Voltar para a oficina e consertar o relógio</button>
-        </div>
+        <div class="passo" id="passo-8">
+            <p>De volta às igrejas, você finalmente encontra o mapa antigo. Agora, para o Amazonas!</p>
+            <button class="btn-proximo" data-proximo="7">Seguir para o Amazonas</button>
+        </div>
 
-                <div class="passo" id="passo-7">
-            <img src="img/prisao-seculo-xviii.png" alt="Cela de prisão de um forte antigo.">
-            <p>🚨 **FIM RUIM:** Você é pego(a) e preso(a) por ladrões. O portal não funciona na prisão. **A aventura termina aqui.**</p>
-        </div>
+        <div class="passo" id="passo-9">
+            <p>O rio à esquerda leva você a uma cachoeira escondida com inscrições antigas que revelam a entrada da
+                cidade perdida.</p>
+            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+        </div>
 
-                <div class="passo" id="passo-8">
-            <p>✅ **SUCESSO:** O marinheiro aceita a tecnologia moderna e você recebe o Cronônio em troca!</p>
-            <button class="btn-proximo" data-proximo="14">Voltar para a oficina e consertar o relógio</button>
-        </div>
+        <div class="passo" id="passo-10">
+            <p>O rio à direita termina em uma área pantanosa. Apesar de belas vistas, não há sinais da cidade perdida
+                aqui.</p>
+            <button class="btn-proximo" data-proximo="12">Retornar e tentar o outro rio</button>
+        </div>
 
-                <div class="passo" id="passo-9">
-            <img src="img/torre-de-belem-vista.png" alt="Vista da Torre de Belém com o Mestre Eusébio">
-            <p>No topo da **Torre de Belém**, você encontra Mestre Eusébio! Ele te ajuda a consertar o relógio, mas revela a data do evento catastrófico de Lisboa: **1º de novembro de 1755**. O tempo está se esgotando!</p>
-            <button class="btn-proximo" data-proximo="14">Consertar o relógio</button>
-        </div>
+        <div class="passo" id="passo-11">
+            <img src="img/cenario-passo11-cidade-perdida.png" alt="encontrando uma cidade maravilhosa perdida no Amazonas">
+            <p>Dentro da cidade perdida, você descobre tesouros inimagináveis e decide se dedicar a estudar e preservar
+                este lugar</p>
+        </div>
 
-                <div class="passo" id="passo-10">
-            <p>O relógio está consertado. Falta apenas um dia para o terremoto. Você pode voltar para sua época e garantir sua segurança, ou tentar avisar a população sobre o perigo iminente.</p>
-            <button class="btn-proximo" data-proximo="15">Voltar para a sua época (Final Neutro)</button>
-            <button class="btn-proximo" data-proximo="16">Tentar avisar a população (Risco de ficar preso)</button>
-        </div>
-
-                <div class="passo" id="passo-11">
-            <img src="img/oficina-relojoeiro.png" alt="Você retorna à sua oficina com o relógio de bolso funcionando.">
-            <p>🕰️ **FINAL NEUTRO:** Você volta, mas a história de Lisboa continua a mesma. Você vive com o conhecimento do que aconteceu, e se torna um guardião do tempo, capaz de viajar, mas nunca mais arriscando a história.</p>
-        </div>
-
-                <div class="passo" id="passo-12">
-            <p>Você tenta avisar, mas a maioria das pessoas não acredita. Você convence algumas famílias, salvando poucas vidas, mas mudando pouco o resultado. Você tem o portal aberto e precisa correr.</p>
-            <button class="btn-proximo" data-proximo="17">Salvar as famílias e voltar</button>
-            <button class="btn-proximo" data-proximo="18">Ficar e ajudar nos escombros</button>
-        </div>
-
-                <div class="passo" id="passo-13">
-            <img src="img/heroi-do-tempo.png" alt="Um herói do tempo com um relógio brilhante.">
-            <p>🏆 **FINAL BOM:** Você consegue voltar, carregando o peso da história, mas também a honra de ter ajudado. O Cronônio lhe permite viagens controladas. Você se torna um(a) herói(a) secreto(a) do tempo.</p>
-        </div>
-
-                <div class="passo" id="passo-14">
-            <img src="img/lisboa-destruida-1755.png" alt="Lisboa em ruínas após o terremoto de 1755.">
-            <p>💀 **FINAL TRÁGICO:** O Terremoto chega. Você não consegue ativar o portal a tempo. O relógio quebra, e você fica preso(a) no passado para sempre, mas se torna um(a) herói(a) que ajudou a reconstruir Lisboa.</p>
-        </div>
-    </main>
-    <script src="script.js"></script>
+        <div class="passo" id="passo-12">
+            <p>Retornando e escolhendo o rio à esquerda, você finalmente encontra a cachoeira escondida e as inscrições
+                que levam à cidade perdida.</p>
+            <button class="btn-proximo" data-proximo="11">Explorar a cidade perdida</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
+
